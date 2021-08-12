@@ -1,0 +1,26 @@
+•	Arduino IDE:
+Go to Files -> Examples -> Arduino ECCX08 -> Tools -> ECCX08CSR
+Generate CSR
+Save 2 files—one with the notes and the second one with the CSR only
+
+
+•	AWS IoT Core:
+Register Thing:
+Create single thing
+Add Certificate -> “Create with CSR”
+Now should have a thing with a name “<device name here>”
+
+Secure Thing:
+Go to Secure -> Policies
+Use the AllowEverything policy (need to create and test a different policy)
+Go to Secure -> Certificates
+Find certificate and download to computer
+Go to actions and attach policy
+Click settings to get the endpoint (this is/has been the same for all devices)
+
+•	Arduino IDE:
+Copy broker end point
+Copy certificate
+Copy WiFi name and pw
+Copy userId
+Upload sketch
